@@ -10,9 +10,9 @@ ProjectName=''
 # 组织名
 OrganizationName=''
 # 模板工程clone地址
-DemoClonePath='https://github.com/dafiger/Project_Demo_OC.git'
+DemoClonePath='https://github.com/dafiger/OCModuleDemo.git'
 # 模板工程名
-DemoName='Project_Demo_OC'
+DemoName='OCModuleDemo'
 
 # 作者
 Author='dafiger'
@@ -178,7 +178,7 @@ sed -i "" "s%_SpecHomePage_%${SpecHomePage}%g"        "${upload_Path}"
 # 组织名修改
 sed -i "" "s%dafiger%${OrganizationName}%g"   "${pbxproj_Path}"
 # BundleId修改
-sed -i "" "s%ProjectDemoOC%${ProjectName}%g"  "${pbxproj_Path}"
+# sed -i "" "s%ProjectDemoOC%${ProjectName}%g"  "${pbxproj_Path}"
 # 工程相关的命名修改
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${pbxproj_Path}"
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${xcworkspacedata_Path}"
