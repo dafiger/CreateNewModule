@@ -135,6 +135,11 @@ cd ${ProjectName}
 # 主工程下的文件重新命名
 mv "${DemoName}" "${ProjectName}"
 mv "${DemoName}.podspec" "${ProjectName}.podspec"
+
+cd "${ProjectName}/Classes/Headers"
+mv "${DemoName}_header.h" "${ProjectName}_header.h"
+cd ../../../
+
 cd Demo
 mv "${DemoName}" "${ProjectName}"
 mv "${DemoName}.xcodeproj" "${ProjectName}.xcodeproj"
