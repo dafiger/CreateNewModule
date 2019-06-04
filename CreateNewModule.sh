@@ -137,7 +137,7 @@ mv "${DemoName}" "${ProjectName}"
 mv "${DemoName}.podspec" "${ProjectName}.podspec"
 
 cd "${ProjectName}/Classes/Header"
-mv "${DemoName}_header.h" "${ProjectName}_header.h"
+mv "${DemoName}Header.h" "${ProjectName}Header.h"
 cd ../
 cd "ModuleManager"
 mv "${DemoName}ModuleManager.h" "${ProjectName}ModuleManager.h"
@@ -161,7 +161,7 @@ pbxproj_Path="./Demo/${ProjectName}.xcodeproj/project.pbxproj"
 xcworkspacedata_Path="./Demo/${ProjectName}.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
 infoplist_Path="./Demo/${ProjectName}/Info.plist"
 
-Header_h_Path="./${ProjectName}/Classes/Header/${ProjectName}_header.h"
+Header_h_Path="./${ProjectName}/Classes/Header/${ProjectName}Header.h"
 ModuleManager_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.h"
 ModuleManager_m_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.m"
 
