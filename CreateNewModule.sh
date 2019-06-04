@@ -159,8 +159,9 @@ upload_Path="./UPLOAD.sh"
 
 pbxproj_Path="./Demo/${ProjectName}.xcodeproj/project.pbxproj"
 xcworkspacedata_Path="./Demo/${ProjectName}.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
+infoplist_Path="./Demo/${ProjectName}/Info.plist"
 
-Header_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}_header.h"
+Header_h_Path="./${ProjectName}/Classes/Header/${ProjectName}_header.h"
 ModuleManager_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.h"
 ModuleManager_m_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.m"
 
@@ -190,6 +191,7 @@ sed -i "" "s%dafiger%${OrganizationName}%g"   "${pbxproj_Path}"
 # 工程相关的命名修改
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${pbxproj_Path}"
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${xcworkspacedata_Path}"
+sed -i "" "s%${DemoName}%${ProjectName}%g"    "${infoplist_Path}"
 
 # spec相关配置命名修改
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${Header_h_Path}"
