@@ -136,8 +136,12 @@ cd ${ProjectName}
 mv "${DemoName}" "${ProjectName}"
 mv "${DemoName}.podspec" "${ProjectName}.podspec"
 
-cd "${ProjectName}/Classes/Headers"
+cd "${ProjectName}/Classes/Header"
 mv "${DemoName}_header.h" "${ProjectName}_header.h"
+cd ../
+cd "ModuleManager"
+mv "${DemoName}ModuleManager.h" "${ProjectName}ModuleManager.h"
+mv "${DemoName}ModuleManager.m" "${ProjectName}ModuleManager.m"
 cd ../../../
 
 cd Demo
@@ -155,6 +159,10 @@ upload_Path="./UPLOAD.sh"
 
 pbxproj_Path="./Demo/${ProjectName}.xcodeproj/project.pbxproj"
 xcworkspacedata_Path="./Demo/${ProjectName}.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
+
+Header_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}_header.h"
+ModuleManager_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.h"
+ModuleManager_m_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.m"
 
 # 修改文件内容
 echo "Start editing..."
@@ -182,6 +190,11 @@ sed -i "" "s%dafiger%${OrganizationName}%g"   "${pbxproj_Path}"
 # 工程相关的命名修改
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${pbxproj_Path}"
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${xcworkspacedata_Path}"
+
+# spec相关配置命名修改
+sed -i "" "s%${DemoName}%${ProjectName}%g"    "${Header_h_Path}"
+sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_h_Path}"
+sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_m_Path}"
 
 echo "Edit finished"
 
