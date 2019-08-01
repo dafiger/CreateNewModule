@@ -139,10 +139,10 @@ mv "${DemoName}.podspec" "${ProjectName}.podspec"
 cd "${ProjectName}/Classes/Header"
 mv "${DemoName}Header.h" "${ProjectName}Header.h"
 cd ../
-cd "ModuleManager"
-mv "${DemoName}ModuleManager.h" "${ProjectName}ModuleManager.h"
-mv "${DemoName}ModuleManager.m" "${ProjectName}ModuleManager.m"
-cd ../../../
+# cd "ModuleManager"
+# mv "${DemoName}ModuleManager.h" "${ProjectName}ModuleManager.h"
+# mv "${DemoName}ModuleManager.m" "${ProjectName}ModuleManager.m"
+# cd ../../../
 
 cd Demo
 mv "${DemoName}" "${ProjectName}"
@@ -162,8 +162,8 @@ xcworkspacedata_Path="./Demo/${ProjectName}.xcodeproj/project.xcworkspace/conten
 infoplist_Path="./Demo/${ProjectName}/Info.plist"
 
 Header_h_Path="./${ProjectName}/Classes/Header/${ProjectName}Header.h"
-ModuleManager_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.h"
-ModuleManager_m_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.m"
+# ModuleManager_h_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.h"
+# ModuleManager_m_Path="./${ProjectName}/Classes/ModuleManager/${ProjectName}ModuleManager.m"
 
 # 修改文件内容
 echo "Start editing..."
@@ -195,8 +195,8 @@ sed -i "" "s%${DemoName}%${ProjectName}%g"    "${infoplist_Path}"
 
 # spec相关配置命名修改
 sed -i "" "s%${DemoName}%${ProjectName}%g"    "${Header_h_Path}"
-sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_h_Path}"
-sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_m_Path}"
+# sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_h_Path}"
+# sed -i "" "s%${DemoName}%${ProjectName}%g"    "${ModuleManager_m_Path}"
 
 echo "Edit finished"
 
