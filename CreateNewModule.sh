@@ -138,11 +138,11 @@ mv "${DemoName}.podspec" "${ProjectName}.podspec"
 
 cd "${ProjectName}/Classes/Header"
 mv "${DemoName}Header.h" "${ProjectName}Header.h"
-cd ../
+# cd ../
 # cd "ModuleManager"
 # mv "${DemoName}ModuleManager.h" "${ProjectName}ModuleManager.h"
 # mv "${DemoName}ModuleManager.m" "${ProjectName}ModuleManager.m"
-# cd ../../../
+cd ../../../
 
 cd Demo
 mv "${DemoName}" "${ProjectName}"
