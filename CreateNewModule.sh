@@ -24,9 +24,9 @@ HTTPSRepositoryPath=''
 # 仓库主页地址
 RepositoryHomePage=''
 # Spec仓库名称
-SpecName='DFPublicSpec'
+SpecName='DFSpec'
 # Spec仓库主页地址
-SpecHomePage='https://github.com/dafiger/DFPublicSpec.git'
+SpecHomePage='https://github.com/dafiger/DFSpec.git'
 
 # 确认状态
 ConfirmStatus='N'
